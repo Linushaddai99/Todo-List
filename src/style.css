@@ -3,40 +3,40 @@
 *,
 *::after,
 *::before {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-    background-color: #f2f2f2;
-    font-family: 'Poppins', sans-serif;
+  background-color: #f2f2f2;
+  font-family: 'Poppins', sans-serif;
 }
 
 main {
-    width: 500px;
-    max-width: 90%;
-    margin: 150px auto;
-    background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  width: 500px;
+  max-width: 90%;
+  margin: 150px auto;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
 }
 
 .main-item {
-    padding: 15px;
-    border-bottom: 1px solid #b6b6b6;
+  padding: 15px;
+  border-bottom: 1px solid #b6b6b6;
 }
 
 .caption {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .more,
 .refresh,
 .checkbox {
-    color: #b6b6b6;
-    font-size: 20px;
+  color: #b6b6b6;
+  font-size: 20px;
 }
 
 /* form input,
@@ -45,46 +45,46 @@ form span {
 } */
 
 form {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 input {
-    border: none;
-    outline: none;
-    font-size: 16px;
+  border: none;
+  outline: none;
+  font-size: 16px;
 }
 
 .arrow-left {
-    font-size: 12px;
-    color: #b6b6b6;
+  font-size: 12px;
+  color: #b6b6b6;
 }
 
 ::placeholder {
-    color: #b6b6b6;
-    font-style: italic;
+  color: #b6b6b6;
+  font-style: italic;
 }
 
 li {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 li p {
-    font-size: 14px;
-    margin-left: 5px;
+  font-size: 14px;
+  margin-left: 5px;
 }
 
 .more {
-    display: block;
-    margin-left: auto;
-    font-size: 25px;
+  display: block;
+  margin-left: auto;
+  font-size: 25px;
 }
 
 .clear {
-    padding: 15px;
-    text-align: center;
-    background-color: #f2f2f2;
-    color: #a8a7a7;
+  padding: 15px;
+  text-align: center;
+  background-color: #f2f2f2;
+  color: #9e9e9e;
 }
