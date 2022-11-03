@@ -1,6 +1,6 @@
-import addTodo from './module/addTodo.js'
+import addTodo from './module/addTodo.js';
 import displayTodo from './module/displayTodo.js';
-import Todo from './module/Todo'
+import Todo from './module/Todo.js';
 import deleteTodo from './module/deleteTodo.js';
 import './style.css';
 
@@ -9,11 +9,9 @@ const inputElement = document.querySelector('#todo');
 const todoList = JSON.parse(localStorage.getItem('todoList')) || [];
 const clearCompleted = document.querySelector('.clear');
 
-  
 todoList.forEach((todo) => {
   displayTodo(todo);
 });
-
 
 mainForm.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -25,9 +23,9 @@ mainForm.addEventListener('submit', (e) => {
 });
 
 clearCompleted.addEventListener('click', () => {
-  todoList.forEach(todo => {
-    if(todo.completed === true) {
+  todoList.forEach((todo) => {
+    if (todo.completed === true) {
       deleteTodo(todo.index);
     }
-  })
-})
+  });
+});

@@ -11,7 +11,7 @@
 body {
   background-color: #f2f2f2;
   font-family: 'Poppins', sans-serif;
-  color: #555
+  color: #555;
 }
 
 main {
@@ -33,7 +33,7 @@ main {
   align-items: center;
 }
 
-.icon{
+.icon {
   color: #b6b6b6;
   font-size: 20px;
   cursor: pointer;
@@ -89,7 +89,6 @@ li p {
 .hide {
   display: none;
 }
-
 
 .edit-background {
   background-color: rgb(243, 243, 176);
