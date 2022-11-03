@@ -2,7 +2,7 @@
 
 In this project, I was able to build an interactive Todo list Applicaton using webpack and javascript modules, the aimm of this project is to practice using webpack to bundle my code.
 
-##- Major Technologies: 
+### Major Technologies: 
 - HTML
 - CSS
 - JavaScript
