@@ -11,6 +11,7 @@
 body {
   background-color: #f2f2f2;
   font-family: 'Poppins', sans-serif;
+  color: #555;
 }
 
 main {
@@ -32,19 +33,13 @@ main {
   align-items: center;
 }
 
-.more,
-.refresh,
-.checkbox {
+.icon {
   color: #b6b6b6;
   font-size: 20px;
+  cursor: pointer;
 }
 
-/* form input,
-form span {
-    display: block;
-} */
-
-form {
+.form-main {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -53,7 +48,8 @@ form {
 input {
   border: none;
   outline: none;
-  font-size: 16px;
+  font-size: 15px;
+  width: 100%;
 }
 
 .arrow-left {
@@ -87,4 +83,17 @@ li p {
   text-align: center;
   background-color: #f2f2f2;
   color: #9e9e9e;
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+.edit-background {
+  background-color: rgb(243, 243, 176);
+}
+
+.check {
+  color: rgb(94, 94, 224);
 }
