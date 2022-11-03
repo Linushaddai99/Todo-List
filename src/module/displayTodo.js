@@ -71,7 +71,6 @@ const displayTodo = (todo) => {
     deleteTodo(todo.index);
   });
 
-
   todoContainer.appendChild(li);
 };
 
