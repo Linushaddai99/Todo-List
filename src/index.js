@@ -23,7 +23,7 @@ mainForm.addEventListener('submit', (e) => {
 
 clearCompleted.addEventListener('click', () => {
   const List = JSON.parse(localStorage.getItem('todoList'));
-  const newList = List.filter(todo => todo.completed === false);
+  const newList = List.filter((todo) => todo.completed === false);
   localStorage.setItem('todoList', JSON.stringify(newList));
   window.location.reload();
 });
