@@ -1,5 +1,6 @@
 import editTodo from './editTodo.js';
 import deleteTodo from './deleteTodo.js';
+import complete from './complete.js';
 
 const todoContainer = document.querySelector('#todo-container');
 
@@ -53,9 +54,23 @@ const displayTodo = (todo) => {
   deleteIcon.textContent = 'delete';
   li.appendChild(deleteIcon);
 
+  checkbox.addEventListener('click', () => {
+    p.style.textDecoration = 'line-through';
+    complete(todo.index);
+    checkbox.classList.add('hide');
+    check.classList.remove('hide');
+  });
+
+  if (todo.completed === true) {
+    checkbox.classList.add('hide');
+    check.classList.remove('hide');
+    p.style.textDecoration = 'line-through';
+  }
+
   deleteIcon.addEventListener('click', () => {
     deleteTodo(todo.index);
   });
+
 
   todoContainer.appendChild(li);
 };
