@@ -1,39 +1,33 @@
+import addTodo from './module/addTodo.js'
+import displayTodo from './module/displayTodo.js';
+import Todo from './module/Todo'
+import deleteTodo from './module/deleteTodo.js';
 import './style.css';
 
-const todoContainer = document.querySelector('#todo-container');
+const mainForm = document.querySelector('.form-main');
+const inputElement = document.querySelector('#todo');
+const todoList = JSON.parse(localStorage.getItem('todoList')) || [];
+const clearCompleted = document.querySelector('.clear');
 
-const todoArr = [
-  {
-    description: 'Wash the car',
-    completeted: false,
-    index: 1,
-  },
-  {
-    description: 'Buy a bottle of milk',
-    completeted: false,
-    index: 2,
-  },
-  {
-    description: 'Call my mom',
-    completeted: false,
-    index: 3,
-  },
-  {
-    description: 'Go to church',
-    completeted: false,
-    index: 4,
-  },
-];
+  
+todoList.forEach((todo) => {
+  displayTodo(todo);
+});
 
-const displayTodo = (arr) => {
-  arr.forEach((todo) => {
-    const li = document.createElement('li');
-    li.className = 'main-item';
-    li.innerHTML = `<span class="material-symbols-outlined checkbox">check_box_outline_blank</span>
-      <p>${todo.description}</p>
-      <span class="material-symbols-outlined more">more_vert</span>`;
-    todoContainer.appendChild(li);
-  });
-};
 
-displayTodo(todoArr);
+mainForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const todo = new Todo(inputElement.value, false, todoList.length + 1);
+
+  todoList.push(todo);
+  addTodo(todoList);
+  mainForm.reset();
+});
+
+clearCompleted.addEventListener('click', () => {
+  todoList.forEach(todo => {
+    if(todo.completed === true) {
+      deleteTodo(todo.index);
+    }
+  })
+})
