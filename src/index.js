@@ -24,6 +24,9 @@ mainForm.addEventListener('submit', (e) => {
 clearCompleted.addEventListener('click', () => {
   const List = JSON.parse(localStorage.getItem('todoList'));
   const newList = List.filter((todo) => todo.completed === false);
+  newList.forEach((todo) => {
+    todo.index = newList.indexOf(todo) + 1;
+  });
   localStorage.setItem('todoList', JSON.stringify(newList));
   window.location.reload();
 });
