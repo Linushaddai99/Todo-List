@@ -104,6 +104,19 @@ button {
   background-color: rgb(243, 243, 176);
 }
 
-.check {
-  color: rgb(94, 94, 224);
+.checkbox {
+  display: inline;
+
+  /* border: 1px solid red; */
+  width: 5%;
 }
+
+.todo-p {
+  /* border: 1px solid red; */
+  width: 100%;
+}
+
+/*
+.li {
+  border: 1px solid red;
+} */
