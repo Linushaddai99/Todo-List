@@ -62,6 +62,11 @@ const displayTodo = (todo) => {
     }
   };
 
+  if (todo.completed) {
+    todoCheck.checked = true;
+    p.style.textDecoration = 'line-through';
+  }
+
   deleteIcon.addEventListener('click', () => {
     deleteTodo(todo.index);
   });
